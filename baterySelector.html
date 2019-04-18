@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="calculator.js"></script>
+</head>
+<body>
+    <div style="text-align:center; padding: 35px; background: #1abc9c; color: white; font-size: 30px;">
+        <h1>Seletor de baterias</h1>
+        <h4 id="subtitle"></h4>
+    </div>
+    <br>
+    <div id="inicio">
+        <h3 style="text-align: center">Você deseja:</h3>
+        <br>
+        <br>
+        <div class="container row" style="text-align: center; margin: auto;">
+            <div class="col-1"></div>
+            <div class="col-4">
+                <p onclick="" style="border: 2px solid #1abc9c; border-radius: 8px; font-size: xx-large;">
+                    <a onclick="showDiv('inicio', 'montar', 'block', 'Montar')" href="#" style="text-decoration: none; color: black;">
+                        Montar
+                    </a>
+                </p>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-4">
+                <p onclick="" style="border: 2px solid #1abc9c; border-radius: 8px; font-size: xx-large;">
+                    <a onclick="showDiv('inicio', 'selecionar', 'block', 'Selecionar')" href="#" style="text-decoration: none; color: black;">
+                        Selecionar
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="montar" style="text-align: center; display: none;">
+        <div class="container row" style="margin: auto;">
+            <div class="col-4">
+                <p>Metal 1:</p>
+				<select id="metal1">
+					<option value="1">Zinco</option>
+					<option value="2">Ferro</option>
+					<option value="3">Cobre</option>
+				</select>
+            </div>
+            <div class="col-4">
+                <p>Concentração (metal 1):</p>
+				<input type="number" value="0" id="concentracao1" style="width: 80px;">
+            </div>
+            <div class="col-4">
+                <p>Peso (metal 1):</p>
+				<input type="number" value="0" id="peso1" style="width: 80px;">
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container row" style="margin: auto;">
+            <div class="col-4">
+                <p>Metal 2:</p>
+				<select id="metal2">
+					<option value="1">Zinco</option>
+					<option value="2">Ferro</option>
+					<option value="3">Cobre</option>
+				</select>
+            </div>
+            <div class="col-4">
+                <p>Concentração (metal 2):</p>
+				<input type="number" value="0" id="concentracao2" style="width: 80px;">
+            </div>
+            <div class="col-4">
+                <p>Peso (metal 2):</p>
+				<input type="number" value="0" id="peso2" style="width: 80px;">
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container row" style="margin: auto;">
+            <div class="col-4">
+                <p>Temperatura:</p>
+				<input type="number" value="0" id="temperatura" style="width: 80px;">
+            </div>
+        </div>
+    </div>
+
+    <div id="selecionar" style="text-align: center; display: none;">
+        <div class="container row" style="margin: auto;">
+            <div class="col-4">
+                <p>DDP:</p>
+				<input type="number" value="0" id="ddp" style="width: 80px;">
+            </div>
+            <div class="col-4">
+                <p>Potência:</p>
+				<input type="number" value="0" id="potencia" style="width: 80px;">
+            </div>
+            <div class="col-4">
+                <p>Tempo que fica ligado:</p>
+				<input type="number" value="0" id="tempo" style="width: 80px;">
+            </div>
+        </div>
+        <br>
+        <div class="container row" style="margin: auto;">
+            <div class="col-4">
+                <p>Capacidade de carga:</p>
+				<input type="number" value="0" id="capacidade" style="width: 80px;">
+            </div>
+        </div>
+    </div>
+    
+</body>
