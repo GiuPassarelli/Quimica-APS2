@@ -1,0 +1,122 @@
+{
+    "Níquel" : [
+        {
+            "Oxidação" : "",
+            "Redução" : "",
+            "Elétrons" : 2,
+            "PotencialOxi" : 0.23,
+            "Solução" : "NiSO4",
+            "MassaMolar" : 58.6934,
+            "PrecoMetal" : ,
+            "PrecoSol" :
+        }
+    ],
+    "Zinco" : [
+        {
+            "Oxidação" : "",
+            "Redução" : "",
+            "Elétrons" : 2,
+            "PotencialOxi" : 0.76,
+            "Solução" : "ZnSO4",
+            "MassaMolar" : 65.38,
+            "PrecoMetal" : ,
+            "PrecoSol" :
+        }
+    ],
+    "Chumbo" : [
+        {
+            "Oxidação" : "",
+            "Redução" : "",
+            "Elétrons" : 2,
+            "PotencialOxi" : 0.13,
+            "Solução" : ,
+            "MassaMolar" : 207.2,
+            "PrecoMetal" : ,
+            "PrecoSol" :
+        }
+    ],
+    "Cádmio" : [
+        {
+            "Oxidação" : "",
+            "Redução" : "",
+            "Elétrons" : 2,
+            "PotencialOxi" : 0.4,
+            "Solução" : ,
+            "MassaMolar" : 112.411,
+            "PrecoMetal" : ,
+            "PrecoSol" :
+        }
+    ],
+    "Magnésio" : [
+        {
+            "Oxidação" : "",
+            "Redução" : "",
+            "Elétrons" : 2,
+            "PotencialOxi" : 2.37,
+            "Solução" : ,
+            "MassaMolar" : 24.305,
+            "PrecoMetal" : ,
+            "PrecoSol" :
+        }
+    ],
+    "Prata" : [
+        {
+            "Oxidação" : "",
+            "Redução" : "",
+            "Elétrons" : 1,
+            "PotencialOxi" : -0.8,
+            "Solução" : ,
+            "MassaMolar" : 107.8682,
+            "PrecoMetal" : ,
+            "PrecoSol" :
+        }
+    ],
+    "Cobre" : [
+        {
+            "Oxidação" : "",
+            "Redução" : "",
+            "Elétrons" : 1,
+            "PotencialOxi" : -0.52,
+            "Solução" : ,
+            "MassaMolar" : 63.546,
+            "PrecoMetal" : ,
+            "PrecoSol" :
+        }
+    ],
+    "Crômio" : [
+        {
+            "Oxidação" : "",
+            "Redução" : "",
+            "Elétrons" : 3,
+            "PotencialOxi" : 0.74,
+            "Solução" : ,
+            "MassaMolar" : 51.9961,
+            "PrecoMetal" : ,
+            "PrecoSol" :
+        }
+    ],
+    "Lítio" : [
+        {
+            "Oxidação" : "",
+            "Redução" : "",
+            "Elétrons" : 1,
+            "PotencialOxi" : 3.04,
+            "Solução" : ,
+            "MassaMolar" : 6.941,
+            "PrecoMetal" : ,
+            "PrecoSol" :
+        }
+    ],
+    "Potássio" : [
+        {
+            "Oxidação" : "",
+            "Redução" : "",
+            "Elétrons" : 1,
+            "PotencialOxi" : 2.92,
+            "Solução" : ,
+            "MassaMolar" : 39.0983,
+            "PrecoMetal" : ,
+            "PrecoSol" :
+        }
+    ]
+}
