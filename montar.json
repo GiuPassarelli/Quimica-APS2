@@ -1,121 +1,137 @@
 {
-    "Níquel" : [
-        {
-            "Oxidação" : "",
-            "Redução" : "",
+    "1" : [
+        {   
+            "id" : "1",
+            "nome" : "Niquel",
+            "Oxidação": "Ni -> Ni2+ + 2e", //reduz
+            "Redução" : "Ni2+ + 2e -> Ni",  //oxida
             "Elétrons" : 2,
-            "PotencialOxi" : 0.23,
+            "PotencialRed" : -0.23,
             "Solução" : "NiSO4",
             "MassaMolar" : 58.6934,
-            "PrecoMetal" : ,
+            "Msol": 159.6106,
+            "PrecoMetal" : 2.59 ,
             "PrecoSol" :
         }
     ],
-    "Zinco" : [
-        {
-            "Oxidação" : "",
-            "Redução" : "",
+    "2" : [
+        {   
+            "id" : "2",
+            "nome" : "Zinco",
+            "Oxidação" : "Zn -> Zn2+ + 2e",
+            "Redução" : "Zn2+ + 2e -> Zn",
             "Elétrons" : 2,
-            "PotencialOxi" : 0.76,
+            "PotencialRed" : -0.76,
             "Solução" : "ZnSO4",
+            "Msol": 161.4446,
             "MassaMolar" : 65.38,
-            "PrecoMetal" : ,
+            "PrecoMetal" : 2.3,
             "PrecoSol" :
         }
     ],
-    "Chumbo" : [
-        {
-            "Oxidação" : "",
-            "Redução" : "",
+    "3" : [
+        {   "id" : "3",
+            "nome":"Chumbo",
+            "Oxidação" : "Pb -> Pb2+ + 2e",
+            "Redução" : "Pb2+ + 2e -> Pb",
             "Elétrons" : 2,
-            "PotencialOxi" : 0.13,
-            "Solução" : ,
+            "PotencialRed" : -0.13,
+            "Solução" :"Pb(NO3)2" ,
             "MassaMolar" : 207.2,
-            "PrecoMetal" : ,
+            "PrecoMetal" : 7.3 ,
             "PrecoSol" :
         }
     ],
-    "Cádmio" : [
-        {
-            "Oxidação" : "",
-            "Redução" : "",
+    "4" : [
+        {   "id" : 4,
+            "nome" :"Cádmio",
+            "Oxidação" : "Cd->Cd2+ + 2e",
+            "Redução" : "Cd2+ + 2e -> Cd",
             "Elétrons" : 2,
-            "PotencialOxi" : 0.4,
+            "PotencialRed" : -0.4,
             "Solução" : ,
             "MassaMolar" : 112.411,
             "PrecoMetal" : ,
             "PrecoSol" :
         }
     ],
-    "Magnésio" : [
-        {
+    "5" : [
+        {   "id":5,
+            "nome": "Magnésio",
             "Oxidação" : "",
             "Redução" : "",
             "Elétrons" : 2,
-            "PotencialOxi" : 2.37,
-            "Solução" : ,
+            "PotencialRed" : -2.37,
+            "Solução" :"MgS04" , //140Kg
             "MassaMolar" : 24.305,
+            "Msol": 331.2128,
             "PrecoMetal" : ,
             "PrecoSol" :
         }
     ],
-    "Prata" : [
-        {
+    "6" : [
+        {   "nome" : "Prata",
             "Oxidação" : "",
             "Redução" : "",
             "Elétrons" : 1,
-            "PotencialOxi" : -0.8,
-            "Solução" : ,
+            "PotencialRed" : 0.8,
+            "Solução" :"AgCl" ,
             "MassaMolar" : 107.8682,
-            "PrecoMetal" : ,
-            "PrecoSol" :
+            "PrecoMetal" :1.31 ,
+            "PrecoSol" : 
         }
     ],
-    "Cobre" : [
-        {
-            "Oxidação" : "",
-            "Redução" : "",
+    "7" : [
+        {   "id" : "7",
+            "nome" : "Cobre",
+            "Oxidação" : " Cd->Cd2+ + 2e",
+            "Redução" : "Cd2+ + 2e -> Cd",
             "Elétrons" : 1,
-            "PotencialOxi" : -0.52,
-            "Solução" : ,
+            "PotencialRed" : 0.52,
+            "Solução" :"CuSO4" ,
             "MassaMolar" : 63.546,
-            "PrecoMetal" : ,
-            "PrecoSol" :
+            "PrecoMetal" : 15 , //  Por Kg
+            "PrecoSol" :6  // Por Kg
         }
     ],
-    "Crômio" : [
-        {
+    "8" : [
+        {   "id": 8,
+            "nome" :"Crômio",
             "Oxidação" : "",
             "Redução" : "",
             "Elétrons" : 3,
-            "PotencialOxi" : 0.74,
+            "PotencialRed" : -0.74,
             "Solução" : ,
             "MassaMolar" : 51.9961,
             "PrecoMetal" : ,
             "PrecoSol" :
         }
     ],
-    "Lítio" : [
-        {
-            "Oxidação" : "",
-            "Redução" : "",
+    "9" : [
+        {   "id" : 9,
+            "nome" : "Lítio", 
+            "Oxidação" : "Li -> Li2+ + 2e",
+            "Redução" : " Li2+ + 2e ->Li ",
             "Elétrons" : 1,
-            "PotencialOxi" : 3.04,
-            "Solução" : ,
+            "PotencialRed" : -3.04,
+            "Solução" :  "LiCl",
+            "Msol": 42.394,
             "MassaMolar" : 6.941,
-            "PrecoMetal" : ,
-            "PrecoSol" :
+            "PrecoMetal" : 79 ,
+            "PrecoSol" :2400  //1Litro  //https://lista.mercadolivre.com.br/cloreto-de-litio-100-g
         }
     ],
-    "Potássio" : [
-        {
+    "10" : [
+        {   "id" : 10,   
+            "nome": "Potássio",
             "Oxidação" : "",
             "Redução" : "",
             "Elétrons" : 1,
-            "PotencialOxi" : 2.92,
+            "PotencialRed" : -2.92,
+            "PotencialOxi" : 2.92, 
             "Solução" : ,
             "MassaMolar" : 39.0983,
-            "PrecoMetal" : ,
+            "PrecoMetal" :0.95 ,
             "PrecoSol" :
         }
     ]
