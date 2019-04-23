@@ -3,7 +3,8 @@
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="calculator.js"></script>
+    <script src="calculator.js"></script>
+    <script type="text/javascript" src="montar.json"></script>
 </head>
 <body>
     <div style="text-align:center; padding: 35px; background: #1abc9c; color: white; font-size: 30px;">
@@ -40,17 +41,24 @@
             <div class="col-4">
                 <p>Metal 1:</p>
 				<select id="metal1">
-					<option value="1">Zinco</option>
-					<option value="2">Ferro</option>
-					<option value="3">Cobre</option>
+					<option value="Niquel">Níquel</option>
+					<option value="Zinco">Zinco</option>
+                    <option value="Chumbo">Chumbo</option>
+                    <option value="Cadmio">Cádmio</option>
+                    <option value="Magnesio">Magnésio</option>
+                    <option value="Prata">Prata</option>
+                    <option value="Cobre">Cobre</option>
+                    <option value="Cromio">Crômio</option>
+                    <option value="Litio">Lítio</option>
+                    <option value="Potassio">Potássio</option>
 				</select>
             </div>
             <div class="col-4">
-                <p>Concentração (solução 1):</p>
+                <p>Concentração (solução 1) em mol/L:</p>
 				<input type="number" value="0" id="concentracao1" style="width: 80px;">
             </div>
             <div class="col-4">
-                <p>Massa total 1:</p>
+                <p>Massa metal 1 em g:</p>
 				<input type="number" value="0" id="massa1" style="width: 80px;">
             </div>
         </div>
@@ -60,17 +68,24 @@
             <div class="col-4">
                 <p>Metal 2:</p>
 				<select id="metal2">
-					<option value="1">Zinco</option>
-					<option value="2">Ferro</option>
-					<option value="3">Cobre</option>
+					<option value="Niquel">Níquel</option>
+					<option value="Zinco">Zinco</option>
+                    <option value="Chumbo">Chumbo</option>
+                    <option value="Cadmio">Cádmio</option>
+                    <option value="Magnesio">Magnésio</option>
+                    <option value="Prata">Prata</option>
+                    <option value="Cobre">Cobre</option>
+                    <option value="Cromio">Crômio</option>
+                    <option value="Litio">Lítio</option>
+                    <option value="Potassio">Potássio</option>
 				</select>
             </div>
             <div class="col-4">
-                <p>Concentração (solução 2):</p>
+                <p>Concentração (solução 2) em mol/L:</p>
 				<input type="number" value="0" id="concentracao2" style="width: 80px;">
             </div>
             <div class="col-4">
-                <p>Massa total 2:</p>
+                <p>Massa metal 2 em g:</p>
 				<input type="number" value="0" id="massa2" style="width: 80px;">
             </div>
         </div>
@@ -78,7 +93,7 @@
         <br>
         <div class="container row" style="margin: auto;">
             <div class="col-4">
-                <p>Temperatura:</p>
+                <p>Temperatura em °C:</p>
 				<input type="number" value="0" id="temperatura" style="width: 80px;">
             </div>
         </div>
@@ -88,7 +103,7 @@
             <div class="col-4"></div>
             <div class="col-4">
                 <p style="border: 2px solid #1abc9c; border-radius: 8px; font-size: xx-large;">
-                    <a onclick="" href="#" style="text-decoration: none; color: black;">
+                    <a onclick="showDiv('montar', 'montarResult', 'block', 'Resultado'); montar()" href="#" style="text-decoration: none; color: black;">
                         Calcular
                     </a>
                 </p>
@@ -99,37 +114,45 @@
     <div id="selecionar" style="text-align: center; display: none;">
         <div class="container row" style="margin: auto;">
             <div class="col-4">
-                <p>DDP:</p>
+                <p>DDP em V:</p>
 				<input type="number" value="0" id="ddp" style="width: 80px;">
             </div>
             <div class="col-4">
-                <p>Potência:</p>
+                <p>Potência em W:</p>
 				<input type="number" value="0" id="potencia" style="width: 80px;">
             </div>
             <div class="col-4">
-                <p>Tempo que fica ligado:</p>
+                <p>Tempo que fica ligado em horas:</p>
 				<input type="number" value="0" id="tempo" style="width: 80px;">
             </div>
         </div>
         <br>
-        <div class="container row" style="margin: auto;">
+        <!-- <div class="container row" style="margin: auto;">
             <div class="col-4">
                 <p>Capacidade de carga:</p>
 				<input type="number" value="0" id="capacidade" style="width: 80px;">
             </div>
-        </div>
+        </div> -->
         <br>
         <br>
         <div class="container row" style="margin: auto; text-align: center">
             <div class="col-4"></div>
             <div class="col-4">
                 <p style="border: 2px solid #1abc9c; border-radius: 8px; font-size: xx-large;">
-                    <a onclick="" href="#" style="text-decoration: none; color: black;">
+                    <a onclick="showDiv('selecionar', 'selecionarResult', 'block', 'Resultado'); selecionar()" href="#" style="text-decoration: none; color: black;">
                         Calcular
                     </a>
                 </p>
             </div>
         </div>
+    </div>
+
+    <div id="montarResult" style="text-align: center; display: none;">
+        
+    </div>
+
+    <div id="selecionarResult" style="text-align: center; display: none;">
+        
     </div>
     
 </body>

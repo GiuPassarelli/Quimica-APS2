@@ -1,0 +1,32 @@
+{
+    "1":{
+        "nome": "",
+        "ddp": ,
+        "cap_carga": ,
+        "preco": 
+    },
+    "2":{
+        "nome": "",
+        "ddp": ,
+        "cap_carga": ,
+        "preco": 
+    },
+    "3":{
+        "nome": "",
+        "ddp": ,
+        "cap_carga": 0.22,
+        "preco": 3.50
+    },
+    "4":{
+        "nome": "Ni-MH 2/3 AAA 1,2V - 500mA",
+        "ddp": 1.2,
+        "cap_carga": 0.5,
+        "preco": 10
+    },
+    "5":{
+        "nome": "",
+        "ddp": ,
+        "cap_carga": ,
+        "preco": 
+    }
+}
