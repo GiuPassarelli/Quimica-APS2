@@ -57,7 +57,7 @@ var montarJSON = [
         "Solução" :"MgS04" ,
         "MassaSolucao":120.3676, 
         "MassaMolar" : 24.305,
-        "Msol": 331.2128,
+        "MassaSolucao": 331.2128,
         "PrecoMetal" : 56,
         "PrecoSol" :102.6
     },
@@ -75,8 +75,8 @@ var montarJSON = [
     },
     {   
         "nome" : "Cobre",
-        "Oxidação" : " Cd->Cd2+ + 2e",
-        "Redução" : "Cd2+ + 2e -> Cd",
+        "Oxidação" : " Cu->Cu2+ + 2e",
+        "Redução" : "Cu2+ + 2e -> Cu",
         "Elétrons" : 1,
         "PotencialRed" : 0.52,
         "Solução" :"CuSO4" ,
