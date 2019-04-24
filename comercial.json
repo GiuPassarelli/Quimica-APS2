@@ -1,21 +1,21 @@
 {
     "1":{
-        "nome": "",
-        "ddp": ,
-        "cap_carga": ,
-        "preco": 
+        "nome": "Bateria Selada UniPower UP12280",
+        "ddp":12 ,
+        "cap_carga":28 ,
+        "preco": 412 
     },
     "2":{
-        "nome": "",
-        "ddp": ,
-        "cap_carga": ,
-        "preco": 
+        "nome": "Pilha Recarregavel D Ni-Cd",
+        "ddp":1.2 ,
+        "cap_carga":4.5 ,
+        "preco": 35
     },
     "3":{
-        "nome": "",
-        "ddp": ,
-        "cap_carga": 0.22,
-        "preco": 3.50
+        "nome": "Bateria 9v recarregavel",
+        "ddp":9,
+        "cap_carga": 0.25,
+        "preco": 36
     },
     "4":{
         "nome": "Ni-MH 2/3 AAA 1,2V - 500mA",
@@ -24,9 +24,9 @@
         "preco": 10
     },
     "5":{
-        "nome": "",
-        "ddp": ,
-        "cap_carga": ,
-        "preco": 
+        "nome": "BATERIA SELADA F187 UP672",
+        "ddp":6 ,
+        "cap_carga": 7.2,
+        "preco": 72.9 
     }
 }
