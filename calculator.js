@@ -1,8 +1,5 @@
-//var montar = JSON.parse(montar);
-
 var montarJSON = [
     {   
-        "id" : "1",
         "nome" : "Niquel",
         "Oxidação": "Ni -> Ni2+ + 2e",
         "Redução" : "Ni2+ + 2e -> Ni",
@@ -10,120 +7,120 @@ var montarJSON = [
         "PotencialRed" : -0.23,
         "Solução" : "NiSO4",
         "MassaMolar" : 58.6934,
-        "Msol": 159.6106,
+        "MassaSolucao": 159.6106,
         "PrecoMetal" : 2.59 ,
-        "PrecoSol" : ""
+        "PrecoSol" : 47.5
     },
     {   
-        "id" : "2",
         "nome" : "Zinco",
         "Oxidação" : "Zn -> Zn2+ + 2e",
         "Redução" : "Zn2+ + 2e -> Zn",
         "Elétrons" : 2,
         "PotencialRed" : -0.76,
         "Solução" : "ZnSO4",
-        "Msol": 161.4446,
+        "MassaSolucao": 161.4446,
         "MassaMolar" : 65.38,
         "PrecoMetal" : 2.3,
-        "PrecoSol" : ""
+        "PrecoSol" : 72
     },
     {   
-        "id" : "3",
         "nome":"Chumbo",
         "Oxidação" : "Pb -> Pb2+ + 2e",
         "Redução" : "Pb2+ + 2e -> Pb",
         "Elétrons" : 2,
         "PotencialRed" : -0.13,
         "Solução" :"Pb(NO3)2" ,
+        "MassaSolucao": 331.2098,
         "MassaMolar" : 207.2,
         "PrecoMetal" : 7.3 ,
-        "PrecoSol" : ""
+        "PrecoSol" : 880
     },
     {   
-        "id" : 4,
         "nome" :"Cádmio",
         "Oxidação" : "Cd->Cd2+ + 2e",
         "Redução" : "Cd2+ + 2e -> Cd",
         "Elétrons" : 2,
         "PotencialRed" : -0.4,
-        "Solução" : "",
+        "Solução" : "CdSO4",
+        "MassaSolucao":208.4736,
         "MassaMolar" : 112.411,
-        "PrecoMetal" : "",
-        "PrecoSol" : ""
+        "PrecoMetal" : 90,
+        "PrecoSol" : 1004
     },
     {   
-        "id":5,
+        
         "nome": "Magnésio",
-        "Oxidação" : "",
-        "Redução" : "",
+        "Oxidação" : "Mg -> Mg2+ + 2e",
+        "Redução" : "Mg2+ + 2e -> Mg",
         "Elétrons" : 2,
         "PotencialRed" : -2.37,
         "Solução" :"MgS04" ,
+        "MassaSolucao":120.3676, 
         "MassaMolar" : 24.305,
-        "Msol": 331.2128,
-        "PrecoMetal" : "",
-        "PrecoSol" :""
+        "MassaSolucao": 331.2128,
+        "PrecoMetal" : 56,
+        "PrecoSol" :102.6
     },
     {   
         "nome" : "Prata",
-        "Oxidação" : "",
-        "Redução" : "",
+        "Oxidação" : "Ag - > Ag+1 + 1e",
+        "Redução" : "Ag+1 + 1e -> Ag",
         "Elétrons" : 1,
         "PotencialRed" : 0.8,
         "Solução" :"AgCl" ,
+        "MassaSolucao":143.3212 , 
         "MassaMolar" : 107.8682,
         "PrecoMetal" :1.31 ,
-        "PrecoSol" : ""
+        "PrecoSol" : 14000
     },
     {   
-        "id" : "7",
         "nome" : "Cobre",
-        "Oxidação" : " Cd->Cd2+ + 2e",
-        "Redução" : "Cd2+ + 2e -> Cd",
+        "Oxidação" : " Cu->Cu2+ + 2e",
+        "Redução" : "Cu2+ + 2e -> Cu",
         "Elétrons" : 1,
         "PotencialRed" : 0.52,
         "Solução" :"CuSO4" ,
+        "MassaSolucao":159.6086,
         "MassaMolar" : 63.546,
         "PrecoMetal" : 15 ,
         "PrecoSol" :6
     },
     {   
-        "id": 8,
-        "nome" :"Crômio",
-        "Oxidação" : "",
-        "Redução" : "",
+        "nome" :"Cromo",
+        "Oxidação" : "Cr -> Cr3+ + 3e",
+        "Redução" : "Cr3+ +3e -> Cr",
         "Elétrons" : 3,
         "PotencialRed" : -0.74,
-        "Solução" : "",
+        "Solução" : "Cr2(SO4)3",
+        "MassaSolucao":392.1800,
         "MassaMolar" : 51.9961,
-        "PrecoMetal" : "",
-        "PrecoSol" :""
+        "PrecoMetal" : 600,
+        "PrecoSol" :276
     },
     {   
-        "id" : 9,
         "nome" : "Lítio", 
         "Oxidação" : "Li -> Li2+ + 2e",
         "Redução" : " Li2+ + 2e ->Li ",
         "Elétrons" : 1,
         "PotencialRed" : -3.04,
         "Solução" :  "LiCl",
-        "Msol": 42.394,
+        "MassaSolucao": 42.394,
         "MassaMolar" : 6.941,
         "PrecoMetal" : 79 ,
         "PrecoSol" :2400
     },
     {   
-        "id" : 10,   
         "nome": "Potássio",
-        "Oxidação" : "",
-        "Redução" : "",
+        "Oxidação" : "K -> K1+ + 1e",
+        "Redução" : "K1+ + 1e -> K",
         "Elétrons" : 1,
         "PotencialRed" : -2.92,
         "PotencialOxi" : 2.92, 
-        "Solução" : "",
+        "Solução" : "KNO3",
+        "MassaSolucao": 101.1032,
         "MassaMolar" : 39.0983,
-        "PrecoMetal" :0.95 ,
-        "PrecoSol" :""
+        "PrecoMetal" : 0.95 ,
+        "PrecoSol" : 26.90
     }
 ]
 
@@ -137,7 +134,6 @@ function montar(){
     montar2(montarJSON);
 }
 
-
 function montar2(montarJSON){    
     const metal1 = document.getElementById("metal1").value;
     const metal2 = document.getElementById("metal2").value;
@@ -147,19 +143,15 @@ function montar2(montarJSON){
     const massa2 = document.getElementById("massa2").value;
     const temperatura = document.getElementById("temperatura").value;
 
-    const mols1 = 1;//massa1/montar.metal1.MassaMolar;
-    const mols2 = 1;//massa2/montar.metal2.MassaMolar;
-    const e1 = 1;//montar.metal1.Eletrons;
-    const e2 = 1;//montar.metal2.Eletrons;
-    const potRed1 = 1;//montar.metal1.PotencialRed;
-    const potRed2 = 1;//montar.metal2.PotencialRed;
+    const mols1 = massa1/montarJSON[metal1].MassaMolar;
+    const mols2 = massa2/montarJSON[metal2].MassaMolar;
+    const e1 = montarJSON[metal1].Elétrons;
+    const e2 = montarJSON[metal2].Elétrons;
+    const potRed1 = montarJSON[metal1].PotencialRed;
+    const potRed2 = montarJSON[metal2].PotencialRed;
     const F = 96485.33289;
     const R = 8.31;
-    let ne, E0, n, concentracaoCima, concentracaoBaixo;
-    
-
-
-    console.log(montarJSON);
+    let ne, E0, concentracaoCima, concentracaoBaixo;
 
     if (mols1 > mols2){
         ne = mols2 * e1;
@@ -174,20 +166,35 @@ function montar2(montarJSON){
         E0 = potRed1 - potRed2;
         concentracaoCima = concentracao2;
         concentracaoBaixo = concentracao1;
+        document.getElementById("montarRed").innerHTML = montarJSON[metal1].Redução;
+        document.getElementById("montarOxi").innerHTML = montarJSON[metal2].Oxidação;
     }
     else{
         E0 = potRed2 - potRed1;
         concentracaoCima = concentracao1;
         concentracaoBaixo = concentracao2;
+        document.getElementById("montarRed").innerHTML = montarJSON[metal2].Redução;
+        document.getElementById("montarOxi").innerHTML = montarJSON[metal1].Oxidação;
     }
     
     let E = E0 - (R* (temperatura+ 273,15))/Q;
 
-    E = E * math.log(concentracaoCima/concentracaoBaixo);
+    E = E * Math.log(concentracaoCima/concentracaoBaixo);
 
     let Dq = Q/(100+massa1+massa2);    //100 = g total solucoes
 
     let De = Dq * 100;    //100 = mL total
+
+    let custo = montarJSON[metal1].PrecoMetal/1000 * massa1;
+    custo += montarJSON[metal1].PrecoSol/1000 * 50;
+    custo += montarJSON[metal2].PrecoMetal/1000 * massa2;
+    custo += montarJSON[metal2].PrecoSol/1000 * 50;
+
+    document.getElementById("montarddp").innerHTML = E + " V";
+    document.getElementById("montarCapdeCarga").innerHTML = Q + " C";
+    document.getElementById("montarDendeCarga").innerHTML = Dq + " C/g";
+    document.getElementById("montarDendeEnergia").innerHTML = De + " C*L/g";
+    document.getElementById("montarCusto").innerHTML = "R$ " + custo;
 
 }
 
