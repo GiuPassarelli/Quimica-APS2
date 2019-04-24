@@ -214,7 +214,7 @@ function montar2(montarJSON){
         document.getElementById("montarOxi").innerHTML = montarJSON[metal1].Oxidação;
     }
     
-    let E = E0 - (R* (temperatura+ 273,15))/(Q* Math.log(concentracaoCima/concentracaoBaixo));
+    let E = E0 - ((R* (temperatura+ 273,15))/(Q)) * Math.log(concentracaoCima/concentracaoBaixo);
 
     let Dq = Q/(100+massa1+massa2);    //100 = g total solucoes
 
