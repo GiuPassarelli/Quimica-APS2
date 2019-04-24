@@ -124,6 +124,39 @@ var montarJSON = [
     }
 ]
 
+var selecionarJSON = [
+    {
+        "nome": "Bateria Selada UniPower UP12280",
+        "ddp":12 ,
+        "cap_carga":28 ,
+        "preco": 412 
+    },
+    {
+        "nome": "Pilha Recarregavel D Ni-Cd",
+        "ddp":1.2 ,
+        "cap_carga":4.5 ,
+        "preco": 35
+    },
+    {
+        "nome": "Bateria 9v recarregavel",
+        "ddp":9,
+        "cap_carga": 0.25,
+        "preco": 36
+    },
+    {
+        "nome": "Ni-MH 2/3 AAA 1,2V - 500mA",
+        "ddp": 1.2,
+        "cap_carga": 0.5,
+        "preco": 10
+    },
+    {
+        "nome": "BATERIA SELADA F187 UP672",
+        "ddp":6 ,
+        "cap_carga": 7.2,
+        "preco": 72.9 
+    }
+]
+
 function showDiv(divIdHide, divIdShow, style, subtitle){
     document.getElementById(divIdHide).style.display = 'none';
     document.getElementById(divIdShow).style.display = style;
@@ -132,6 +165,10 @@ function showDiv(divIdHide, divIdShow, style, subtitle){
 
 function montar(){
     montar2(montarJSON);
+}
+
+function selecionar(){
+    selecionar2(selecionarJSON);
 }
 
 function montar2(montarJSON){    
@@ -190,16 +227,111 @@ function montar2(montarJSON){
     custo += montarJSON[metal2].PrecoMetal/1000 * massa2;
     custo += montarJSON[metal2].PrecoSol/1000 * 50;
 
-    document.getElementById("montarddp").innerHTML = E + " V";
-    document.getElementById("montarCapdeCarga").innerHTML = Q + " C";
-    document.getElementById("montarDendeCarga").innerHTML = Dq + " C/g";
-    document.getElementById("montarDendeEnergia").innerHTML = De + " C*L/g";
-    document.getElementById("montarCusto").innerHTML = "R$ " + custo;
+    document.getElementById("solucao1").innerHTML = "Solucao do metal 1: "+ montarJSON[metal1].Solução;
+    document.getElementById("solucao2").innerHTML = "Solucao do metal 2: "+ montarJSON[metal2].Solução;
+    document.getElementById("montarddp").innerHTML = "ddp: "+ E + " V";
+    document.getElementById("montarCapdeCarga").innerHTML = "Capacidade de carga: " + Q + " Ah";
+    document.getElementById("montarDendeCarga").innerHTML = "Densidade de carga: " + Dq + " Ah/g";
+    document.getElementById("montarDendeEnergia").innerHTML = "Densidade de energia: " + De + " Ah*L/g";
+    document.getElementById("montarCusto").innerHTML = "Custo: " + "R$ " + custo;
 
 }
 
 
-function selecionar(){
+function selecionar2(selecionarJSON){
+    const ddp = document.getElementById("ddp").value;
+    const potencia = document.getElementById("potencia").value;
+    const tempo = document.getElementById("tempo").value;
+    var serie = [];
+    var paralelo = [];
+    var ddpsFinais = [];
+    var potsFinais = [];
+
+    let corrente = potencia/ddp;
+    let capCarga = tempo * corrente;
+    let capCargaBateriaOriginal, capCargaBateria, capCargaBateriaAntigo, ddpBateriaOriginal, ddpBateria, ddpBateriaAntigo, serieValue, paraleloValue;
+
+    for(var i = 0; i < selecionarJSON.length; i++){
+        capCargaBateriaOriginal = selecionarJSON[i].cap_carga;
+        capCargaBateria = capCargaBateriaOriginal;
+
+        ddpBateriaOriginal = selecionarJSON[i].ddp;
+        ddpBateria = ddpBateriaOriginal;
+
+        serieValue = 1;
+        paraleloValue = 1;
+
+        while(ddp > ddpBateria){
+            ddpBateriaAntigo = ddpBateria;
+            ddpBateria += ddpBateriaOriginal;
+            serieValue += 1;
+        }
+
+        serie[i] = String(serieValue);
+        ddpsFinais[i] = ddpBateria;
+
+        if(serieValue == 1){
+            serieValue = 2;
+        }
+        if((ddp - ddpBateriaAntigo) <= (ddpBateria - ddp)) {
+            serie[i] = String(serieValue - 1);
+            ddpsFinais[i] = ddpBateriaAntigo;
+        }
+
+        while(capCarga > capCargaBateria){
+            capCargaBateriaAntigo = capCargaBateria;
+            capCargaBateria += capCargaBateriaOriginal;
+            paraleloValue += 1;
+        }
+
+        paralelo[i] = String(paraleloValue);
+        potsFinais[i] = ddpsFinais[i] * capCargaBateria/tempo;
+        
+        if(paraleloValue == 1){
+            paraleloValue = 2;
+        }
+        if((capCarga - capCargaBateriaAntigo) <= (capCargaBateria - capCarga)){
+            paralelo[i] = String(paraleloValue - 1);
+            potsFinais[i] = ddpsFinais[i] * capCargaBateriaAntigo/tempo;
+        }
+    }
+    console.log(serie);
+    console.log(paralelo);
+
+    document.getElementById("nome1").innerHTML = selecionarJSON[0].nome;
+    document.getElementById("serie1").innerHTML = "Pilhas em série: "+ serie[0];
+    document.getElementById("paralelo1").innerHTML = "Pilhas em paralelo: "+ paralelo[0];
+    document.getElementById("ddp1").innerHTML = "DDP da associação: "+ ddpsFinais[0];
+    document.getElementById("pot1").innerHTML = "Potência da associação: "+ potsFinais[0];
+    document.getElementById("preco1").innerHTML = "Custo: R$"+ selecionarJSON[0].preco * (paralelo[0] * serie[0]);
+
+    document.getElementById("nome2").innerHTML = selecionarJSON[1].nome;
+    document.getElementById("serie2").innerHTML = "Pilhas em série: "+ serie[1];
+    document.getElementById("paralelo2").innerHTML = "Pilhas em paralelo: "+ paralelo[1];
+    document.getElementById("ddp2").innerHTML = "DDP da associação: "+ ddpsFinais[1];
+    document.getElementById("pot2").innerHTML = "Potência da associação: "+ potsFinais[1];
+    document.getElementById("preco2").innerHTML = "Custo: R$"+ selecionarJSON[1].preco * (paralelo[1] * serie[1]);
+
+    document.getElementById("nome3").innerHTML = selecionarJSON[2].nome;
+    document.getElementById("serie3").innerHTML = "Pilhas em série: "+ serie[2];
+    document.getElementById("paralelo3").innerHTML = "Pilhas em paralelo: "+ paralelo[2];
+    document.getElementById("ddp3").innerHTML = "DDP da associação: "+ ddpsFinais[2];
+    document.getElementById("pot3").innerHTML = "Potência da associação: "+ potsFinais[2];
+    document.getElementById("preco3").innerHTML = "Custo: R$"+ selecionarJSON[2].preco * (paralelo[2] * serie[2]);
+
+    document.getElementById("nome4").innerHTML = selecionarJSON[3].nome;
+    document.getElementById("serie4").innerHTML = "Pilhas em série: "+ serie[3];
+    document.getElementById("paralelo4").innerHTML = "Pilhas em paralelo: "+ paralelo[3];
+    document.getElementById("ddp4").innerHTML = "DDP da associação: "+ ddpsFinais[3];
+    document.getElementById("pot4").innerHTML = "Potência da associação: "+ potsFinais[3];
+    document.getElementById("preco4").innerHTML = "Custo: R$"+ selecionarJSON[3].preco * (paralelo[3] * serie[3]);
+
+    document.getElementById("nome5").innerHTML = selecionarJSON[4].nome;
+    document.getElementById("serie5").innerHTML = "Pilhas em série: "+ serie[4];
+    document.getElementById("paralelo5").innerHTML = "Pilhas em paralelo: "+ paralelo[4];
+    document.getElementById("ddp5").innerHTML = "DDP da associação: "+ ddpsFinais[4];
+    document.getElementById("pot5").innerHTML = "Potência da associação: "+ potsFinais[4];
+    document.getElementById("preco5").innerHTML = "Custo: R$"+ selecionarJSON[4].preco * (paralelo[4] * serie[4]);
     
 }
 
